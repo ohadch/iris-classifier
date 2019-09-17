@@ -122,7 +122,6 @@ if __name__ == "__main__":
       input_width=input_width,
       input_mean=input_mean,
       input_std=input_std)
-
   input_name = "import/" + input_layer
   output_name = "import/" + output_layer
   input_operation = graph.get_operation_by_name(input_name)
