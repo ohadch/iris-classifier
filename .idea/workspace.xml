@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef9e0a60-abc7-48c1-8505-631119cc0e50" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/classifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/classifier.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/components/ImageUpload.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/components/ImageUpload.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -154,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568750950642</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Classifies image on upload">
+      <created>1568751271619</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1568751271619</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -176,6 +186,18 @@
     <MESSAGE value="Uploads a file" />
     <MESSAGE value="Adds classification model" />
     <MESSAGE value="Classification returns dict" />
-    <option name="LAST_COMMIT_MESSAGE" value="Classification returns dict" />
+    <MESSAGE value="Classifies image on upload" />
+    <option name="LAST_COMMIT_MESSAGE" value="Classifies image on upload" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/utils/classifier.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

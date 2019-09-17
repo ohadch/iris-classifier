@@ -6,6 +6,10 @@
 
     <v-flex v-if="uploading">Uploading...</v-flex>
 
+    <v-flex v-if="classification">
+      {{ JSON.stringify(classification) }}
+    </v-flex>
+
     <v-flex>
       <div class="my-8">
         <image-uploader
@@ -41,7 +45,7 @@
 </template>
 
 <script>
-import uploadFile from "@/api/uploadFile";
+import classifyImage from "@/api/classifyImage";
 
 export default {
   name: "ImageUpload",
@@ -50,7 +54,8 @@ export default {
       msg: "Upload Your Flower Image",
       hasImage: false,
       image: null,
-      uploading: false
+      uploading: false,
+      classification: null
     };
   },
   methods: {
@@ -60,10 +65,15 @@ export default {
       console.log(this.image);
       this.uploadImage();
     },
-    uploadImage() {
+    async uploadImage() {
       this.uploading = true;
-      uploadFile(this.image);
+      
+      // Uploads the image and classifies it
+      let { classification } = await classifyImage(this.image);
+      this.classification = classification
+
       this.uploading = false;
+
     }
   }
 };

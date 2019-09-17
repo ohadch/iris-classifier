@@ -39,8 +39,11 @@ def upload_file():
             full_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             file.save(full_path)
 
-            # Classify file
+            # Classifies the image
             classification = classify(full_path)
+
+            # Removes the uploaded image
+            os.remove(full_path)
 
             return jsonify({'classification': classification})
 
