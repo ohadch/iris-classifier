@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ef9e0a60-abc7-48c1-8505-631119cc0e50" name="Default Changelist" comment="" />
+    <list default="true" id="ef9e0a60-abc7-48c1-8505-631119cc0e50" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +168,28 @@
       <option name="project" value="LOCAL" />
       <updated>1568751716477</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Returns the classification">
+      <created>1568752220763</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1568752220763</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Builds and adds environment.yml and requirements.txt">
+      <created>1568752366076</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1568752366076</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Adds procfile">
+      <created>1568752458175</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1568752458175</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -190,7 +213,10 @@
     <MESSAGE value="Classification returns dict" />
     <MESSAGE value="Classifies image on upload" />
     <MESSAGE value="Prints the classification" />
-    <option name="LAST_COMMIT_MESSAGE" value="Prints the classification" />
+    <MESSAGE value="Returns the classification" />
+    <MESSAGE value="Builds and adds environment.yml and requirements.txt" />
+    <MESSAGE value="Adds procfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adds procfile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
