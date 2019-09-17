@@ -9,7 +9,7 @@ RUN conda update conda -y
 COPY . /app
 WORKDIR /app
 
-RUN conda create -n imagecl -f environment.yml
+RUN ["conda", "env", "create", "--name", "imagecl", "-f", "environment.yml"]
 RUN source activate imagecl
 RUN pip install -r requirements.txt
 
