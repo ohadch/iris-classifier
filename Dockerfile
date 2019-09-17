@@ -1,10 +1,15 @@
-FROM continuumio/anaconda
+FROM continuumio/miniconda3:4.5.12
+
+
 LABEL maintainer="Ohad Chaet <ohadch9518@gmail.com>"
+
+## Update conda
+RUN conda update conda -y
 
 COPY . /app
 WORKDIR /app
 
-RUN conda create -n imagecl -f environment.yml python=3.7 anaconda
+RUN conda create -n imagecl -f environment.yml
 RUN source activate imagecl
 RUN pip install -r requirements.txt
 

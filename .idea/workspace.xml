@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef9e0a60-abc7-48c1-8505-631119cc0e50" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -280,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568759445843</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Updates the email">
+      <created>1568759874774</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1568759874774</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -317,7 +325,8 @@
     <MESSAGE value="Updates buildpack" />
     <MESSAGE value="Adds dockerfile" />
     <MESSAGE value="Updates the dockerfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updates the dockerfile" />
+    <MESSAGE value="Updates the email" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates the email" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
