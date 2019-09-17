@@ -1,4 +1,4 @@
-import os
+import re
 import subprocess
 import sys
 
@@ -25,5 +25,5 @@ def classify(image_path: str) -> dict:
     if err is not None:
         raise RuntimeError(err)
 
-    classification = out.decode().strip().split("\n")
+    classification = dict([re.compile(r"\s+").split(foo) for foo in out.decode().strip().split("\n")])
     return classification
