@@ -15,7 +15,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
 @app.route('/')
-def catch_all(path):
+def catch_all():
     return render_template("index.html")
 
 
@@ -29,11 +29,7 @@ def upload_file():
 
         file = request.files['file']
 
-        # if user does not select file, browser also
-        # submit a empty part without filename
-        if file.filename == '':
-            return jsonify({'error': 'file must have a name'})
-
+        # Process file if it is allowed
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             full_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)

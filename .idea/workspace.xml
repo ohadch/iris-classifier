@@ -189,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568752458175</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Adds missing files">
+      <created>1568753059226</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1568753059226</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -216,7 +223,8 @@
     <MESSAGE value="Returns the classification" />
     <MESSAGE value="Builds and adds environment.yml and requirements.txt" />
     <MESSAGE value="Adds procfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds procfile" />
+    <MESSAGE value="Adds missing files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adds missing files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
