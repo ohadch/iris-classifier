@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ef9e0a60-abc7-48c1-8505-631119cc0e50" name="Default Changelist" comment="" />
+    <list default="true" id="ef9e0a60-abc7-48c1-8505-631119cc0e50" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +238,21 @@
       <option name="project" value="LOCAL" />
       <updated>1568757469441</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Updates buildpack">
+      <created>1568757719893</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1568757719893</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Updates buildpack">
+      <created>1568757899822</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1568757899822</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -270,7 +286,8 @@
     <MESSAGE value="Adds dyno" />
     <MESSAGE value="Updates procfile" />
     <MESSAGE value="Updates gunicorn in requirements" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updates gunicorn in requirements" />
+    <MESSAGE value="Updates buildpack" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates buildpack" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
