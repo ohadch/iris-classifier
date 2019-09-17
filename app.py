@@ -1,11 +1,10 @@
 import os
 
 from flask import Flask, jsonify, request, render_template
-from sklearn import svm
-from sklearn import datasets
-from sklearn.externals import joblib
+from werkzeug.utils import secure_filename
 
 from settings import HOST, PORT, DEBUG
+from utils.upload import allowed_file
 
 # initialize flask application
 app = Flask(__name__,
@@ -19,40 +18,25 @@ def catch_all(path):
     return render_template("index.html")
 
 
-@app.route('/api/train', methods=['POST'])
-def train():
-    # get parameters from request
-    parameters = request.get_json()
+@app.route("/file", methods=['POST'])
+def upload_file():
+    if request.method == 'POST':
 
-    # read iris data set
-    iris = datasets.load_iris()
-    X, y = iris.data, iris.target
+        # check if the post request has the file part
+        if 'file' not in request.files:
+            return jsonify({'error': 'no file has been provided'})
 
-    # fit model
-    clf = svm.SVC(C=float(parameters['C']),
-                  probability=True,
-                  random_state=1)
+        file = request.files['file']
 
-    clf.fit(X, y)
+        # if user does not select file, browser also
+        # submit a empty part without filename
+        if file.filename == '':
+            return jsonify({'error': 'file must have a name'})
 
-    # persist model
-    joblib.dump(clf, 'model.pkl')
-    return jsonify({'accuracy': round(clf.score(X, y) * 100, 2)})
-
-
-@app.route('/api/predict', methods=['POST'])
-def predict():
-    # get iris object from request
-    X = request.get_json()
-    X = [[float(X['sepalLength']), float(X['sepalWidth']), float(X['petalLength']), float(X['petalWidth'])]]
-
-    # read model
-    clf = joblib.load('model.pkl')
-    probabilities = clf.predict_proba(X)
-
-    return jsonify([{'name': 'Iris-Setosa', 'value': round(probabilities[0, 0] * 100, 2)},
-                    {'name': 'Iris-Versicolour', 'value': round(probabilities[0, 1] * 100, 2)},
-                    {'name': 'Iris-Virginica', 'value': round(probabilities[0, 2] * 100, 2)}])
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            return jsonify({'message': 'file has been uploaded successfully'})
 
 
 if __name__ == '__main__':
