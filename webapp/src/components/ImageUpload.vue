@@ -4,6 +4,8 @@
       <h1>{{ msg }}</h1>
     </v-flex>
 
+    <v-flex v-if="uploading">Uploading...</v-flex>
+
     <v-flex>
       <div class="my-8">
         <image-uploader
@@ -13,7 +15,7 @@
           :debug="1"
           doNotResize="gif"
           :autoRotate="true"
-          outputFormat="verbose"
+          outputFormat="file"
           @input="setImage"
         >
           <label for="fileInput" slot="upload-label">
@@ -39,13 +41,16 @@
 </template>
 
 <script>
+import uploadFile from "@/api/uploadFile";
+
 export default {
   name: "ImageUpload",
   data() {
     return {
       msg: "Upload Your Flower Image",
       hasImage: false,
-      image: null
+      image: null,
+      uploading: false
     };
   },
   methods: {
@@ -53,6 +58,12 @@ export default {
       this.hasImage = true;
       this.image = output;
       console.log(this.image);
+      this.uploadImage();
+    },
+    uploadImage() {
+      this.uploading = true;
+      uploadFile(this.image);
+      this.uploading = false;
     }
   }
 };

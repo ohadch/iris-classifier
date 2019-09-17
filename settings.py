@@ -9,4 +9,4 @@ ENV = os.environ.get("ENV", "production")
 DEBUG = ENV == 'development'
 
 ALLOWED_IMG_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
-UPLOADS_DIR = "/uploads"
+UPLOAD_FOLDER = "uploads"

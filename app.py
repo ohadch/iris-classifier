@@ -3,27 +3,27 @@ import os
 from flask import Flask, jsonify, request, render_template
 from werkzeug.utils import secure_filename
 
-from settings import HOST, PORT, DEBUG
+from settings import HOST, PORT, DEBUG, UPLOAD_FOLDER
 from utils.upload import allowed_file
 
 # initialize flask application
 app = Flask(__name__,
             static_folder="./dist/static",
             template_folder="./dist")
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
-@app.route('/', defaults={'path': ''})
-@app.route('/<path:path>')
+@app.route('/')
 def catch_all(path):
     return render_template("index.html")
 
 
-@app.route("/file", methods=['POST'])
+@app.route("/api/file", methods=['POST'])
 def upload_file():
     if request.method == 'POST':
 
         # check if the post request has the file part
-        if 'file' not in request.files:
+        if request.files.get('file') is None:
             return jsonify({'error': 'no file has been provided'})
 
         file = request.files['file']
