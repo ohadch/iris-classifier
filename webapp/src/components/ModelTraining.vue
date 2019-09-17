@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <v-card>
         Training
-    </div>
+    </v-card>
 </template>
 
 <script>

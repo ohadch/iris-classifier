@@ -1,17 +1,16 @@
 <template>
-  <div class="home">
+  <v-layout text-center align-center justify-center mt-2>
+    <v-flex xs12 sm6 md6>
     <ModelTraining />
-  </div>
+    </v-flex>
+  </v-layout>
 </template>
 
 <script>
-// @ is an alias to /src
-import ModelTraining from '@/components/ModelTraining'
-
+import ModelTraining from "@/components/ModelTraining";
 export default {
-  name: 'home',
   components: {
     ModelTraining
   }
-}
+};
 </script>
