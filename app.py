@@ -45,5 +45,6 @@ def upload_file():
 
 
 if __name__ == '__main__':
-    # run web server
-    app.run(host=HOST, debug=DEBUG, port=PORT)
+    # Bind to PORT if defined, otherwise default to 5000.
+    port = int(os.environ.get('PORT', 5000))
+    app.run(port=port)

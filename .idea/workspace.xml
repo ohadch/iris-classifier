@@ -196,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568753059226</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Deletes requirements">
+      <created>1568753789782</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1568753789782</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -224,7 +231,8 @@
     <MESSAGE value="Builds and adds environment.yml and requirements.txt" />
     <MESSAGE value="Adds procfile" />
     <MESSAGE value="Adds missing files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds missing files" />
+    <MESSAGE value="Deletes requirements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deletes requirements" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
