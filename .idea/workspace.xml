@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ef9e0a60-abc7-48c1-8505-631119cc0e50" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/classifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/classifier.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/components/ImageUpload.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/components/ImageUpload.vue" afterDir="false" />
-    </list>
+    <list default="true" id="ef9e0a60-abc7-48c1-8505-631119cc0e50" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568751271619</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Prints the classification">
+      <created>1568751716477</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1568751716477</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -187,7 +189,8 @@
     <MESSAGE value="Adds classification model" />
     <MESSAGE value="Classification returns dict" />
     <MESSAGE value="Classifies image on upload" />
-    <option name="LAST_COMMIT_MESSAGE" value="Classifies image on upload" />
+    <MESSAGE value="Prints the classification" />
+    <option name="LAST_COMMIT_MESSAGE" value="Prints the classification" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
