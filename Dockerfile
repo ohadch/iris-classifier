@@ -1,5 +1,5 @@
 FROM continuumio/anaconda
-LABEL maintainer="Ohad Chaet <ohad.chaet@deepcoding.ai>"
+LABEL maintainer="Ohad Chaet <ohadch9518@gmail.com>"
 
 COPY . /app
 WORKDIR /app
