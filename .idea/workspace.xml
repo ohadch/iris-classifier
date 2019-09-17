@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef9e0a60-abc7-48c1-8505-631119cc0e50" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -217,7 +217,21 @@
       <option name="project" value="LOCAL" />
       <updated>1568756712712</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Adds dyno">
+      <created>1568756960712</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1568756960712</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Updates procfile">
+      <created>1568757196130</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1568757196130</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -248,7 +262,9 @@
     <MESSAGE value="Deletes requirements" />
     <MESSAGE value="Updates the port" />
     <MESSAGE value="Updates the gunicorn" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updates the gunicorn" />
+    <MESSAGE value="Adds dyno" />
+    <MESSAGE value="Updates procfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates procfile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
