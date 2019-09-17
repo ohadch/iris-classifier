@@ -3,6 +3,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify';
+import ImageUploader from 'vue-image-upload-resize'
+Vue.use(ImageUploader);
 
 Vue.config.productionTip = false
 
