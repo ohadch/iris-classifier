@@ -2,6 +2,8 @@ import re
 import subprocess
 import sys
 
+from pprint import pprint
+
 
 def classify(image_path: str) -> dict:
     """
@@ -25,5 +27,8 @@ def classify(image_path: str) -> dict:
     if err is not None:
         raise RuntimeError(err)
 
+    # Classify the image
     classification = dict([re.compile(r"\s+").split(foo) for foo in out.decode().strip().split("\n")])
+    pprint(classification)
+
     return classification

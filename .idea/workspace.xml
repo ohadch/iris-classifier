@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef9e0a60-abc7-48c1-8505-631119cc0e50" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/exp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/classifier.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/label_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/label_image.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +39,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.exp">
+  <component name="RunManager" selected="Python.server">
     <configuration name="exp" type="PythonConfigurationType" factoryName="Python">
       <module name="server" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -144,7 +140,21 @@
       <option name="project" value="LOCAL" />
       <updated>1568746117613</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Adds classification model">
+      <created>1568750858122</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1568750858122</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Classification returns dict">
+      <created>1568750950642</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1568750950642</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -164,6 +174,8 @@
     <MESSAGE value="Adds tensorflow files" />
     <MESSAGE value="Adds upload file route" />
     <MESSAGE value="Uploads a file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Uploads a file" />
+    <MESSAGE value="Adds classification model" />
+    <MESSAGE value="Classification returns dict" />
+    <option name="LAST_COMMIT_MESSAGE" value="Classification returns dict" />
   </component>
 </project>

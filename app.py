@@ -5,6 +5,7 @@ from werkzeug.utils import secure_filename
 
 from settings import HOST, PORT, DEBUG, UPLOAD_FOLDER
 from utils.upload import allowed_file
+from utils.classifier import classify
 
 # initialize flask application
 app = Flask(__name__,
@@ -35,8 +36,13 @@ def upload_file():
 
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            return jsonify({'message': 'file has been uploaded successfully'})
+            full_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            file.save(full_path)
+
+            # Classify file
+            classification = classify(full_path)
+
+            return jsonify({'classification': classification})
 
 
 if __name__ == '__main__':
