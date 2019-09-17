@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ef9e0a60-abc7-48c1-8505-631119cc0e50" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="ef9e0a60-abc7-48c1-8505-631119cc0e50" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568757196130</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Updates gunicorn in requirements">
+      <created>1568757469441</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1568757469441</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -264,7 +269,8 @@
     <MESSAGE value="Updates the gunicorn" />
     <MESSAGE value="Adds dyno" />
     <MESSAGE value="Updates procfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updates procfile" />
+    <MESSAGE value="Updates gunicorn in requirements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates gunicorn in requirements" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
