@@ -1,0 +1,19 @@
+version: '3.4'
+services:
+  flask:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - PORT=8000
+    ports:
+      - 8000:8000
+
+  tensorflow:
+    image: tensorflow/serving
+    volumes:
+      - /serving:/server/trained_models
+    ports:
+      - "6379:6379"
+    environment:
+      - MODEL_NAME=flowers_classifier
