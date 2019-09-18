@@ -43,8 +43,6 @@ def classify(image_path: str, dataset_name) -> dict:
     if err is not None:
         raise RuntimeError(err)
 
-    logger.info(f"Error: {err}")
-
     # Decode the output
     output = out.decode()
     logger.info(f"OUTPUT: {output}")
