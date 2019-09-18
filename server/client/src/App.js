@@ -3,8 +3,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
+import Typography from "@material-ui/core/Typography";
+import Dropzone from "./components/Dropzone";
 
 const useStyles = makeStyles(theme => ({
   appBar: {
@@ -58,11 +58,7 @@ export default function App() {
         </Toolbar>
       </AppBar>
       <main className={classes.layout}>
-        <Paper className={classes.paper}>
-          <Typography component="h1" variant="h4" align="center">
-            Classify Your Flower
-          </Typography>
-        </Paper>
+        <Dropzone />
       </main>
     </React.Fragment>
   );
