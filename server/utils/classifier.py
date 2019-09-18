@@ -16,20 +16,21 @@ def classify(image_path: str, dataset_name) -> dict:
     :param dataset_name: The dataset name for the image to be classified
     :return: The image classification
     """
-    model_path = os.path.join(MODELS_FOLDER, f"{dataset_name}_graph.pb")
+    graph_path = os.path.join(MODELS_FOLDER, f"{dataset_name}_graph.pb")
+    labels = os.path.join(MODELS_FOLDER, f"{dataset_name}_labels.txt")
 
     # Validate model exists
-    if not os.path.exists(model_path):
-        raise ValueError(f"Model does not exist: {model_path}")
+    if not os.path.exists(graph_path):
+        raise ValueError(f"Model does not exist: {graph_path}")
 
     # Classify the image
-    logger.info(f"Classifying: {image_path}, model path: {model_path}")
+    logger.info(f"Classifying: {image_path}, model path: {graph_path}")
     p = subprocess.Popen([
         sys.executable,
         "label_image.py",
-        "--graph=retrained_graph.pb",
+        f"--graph={graph_path}",
         f'--image={image_path}',
-        "--labels=retrained_labels.txt",
+        f"--labels={labels}",
         "--output_layer=final_result",
         "--input_layer=Placeholder"
     ], stdout=subprocess.PIPE, shell=False)
