@@ -8,6 +8,7 @@ from settings import MODELS_FOLDER
 
 from logger import logger
 
+
 def classify(image_path: str, dataset_name) -> dict:
     """
     Classifies a flower image to its type.

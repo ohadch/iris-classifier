@@ -14,6 +14,11 @@ app = Flask(__name__,
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
+@app.before_request
+def log_request_info():
+    app.logger.debug('Headers: %s', request.headers)
+
+
 @app.route('/')
 def catch_all():
     return render_template("index.html")
