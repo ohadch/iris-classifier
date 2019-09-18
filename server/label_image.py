@@ -18,14 +18,9 @@ from __future__ import division
 from __future__ import print_function
 
 import argparse
-import os
-import json
-import datetime
 
 import numpy as np
 import tensorflow as tf
-
-from logger import logger
 
 
 def load_graph(model_file):
@@ -143,10 +138,6 @@ if __name__ == "__main__":
 
     # Info
     classification = dict(zip(labels, results))
-    logger.info(f"Classification: {dict(zip(labels, results))}")
-    with open(os.path.join("logs", datetime.datetime.now().isoformat() + ".json"), 'w') as f:
-        f.write(json.dumps(classification))
 
     for i in top_k:
-        logger.info(labels[i], results[i])
         print(labels[i], results[i])

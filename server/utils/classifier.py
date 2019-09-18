@@ -45,7 +45,7 @@ def subprocess_classification(graph_path, labels_path, image_path):
         "--input_layer=Placeholder"
     ]
 
-    p = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=False)
+    p = subprocess.Popen(cmd, shell=False, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     logger.info(f"Cmd: {' '.join(cmd)}")
     out, err = p.communicate()
 
@@ -54,6 +54,7 @@ def subprocess_classification(graph_path, labels_path, image_path):
 
     # Decode the output
     output = out.decode()
+    raw_classification = out.decode().split("\n\n")[-1].strip()
     logger.info(f"OUTPUT: {output}")
 
     # Check empty classification
@@ -62,7 +63,7 @@ def subprocess_classification(graph_path, labels_path, image_path):
         raise ValueError("Classification was not produced")
 
     # Parse the result
-    classification = dict([re.compile(r"\s+").split(foo) for foo in output.strip().split("\n")])
+    classification = dict([re.compile(r"\s+").split(foo) for foo in raw_classification.split("\n")])
     logger.info(pformat(classification))
 
     return classification
