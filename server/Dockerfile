@@ -6,4 +6,4 @@ WORKDIR /app
 
 EXPOSE 8000
 
-CMD ["gunicorn", "app:app"]
+CMD ["python", "app.py"]

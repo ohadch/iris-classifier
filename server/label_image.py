@@ -18,6 +18,9 @@ from __future__ import division
 from __future__ import print_function
 
 import argparse
+import os
+import json
+import datetime
 
 import numpy as np
 import tensorflow as tf
@@ -139,7 +142,10 @@ if __name__ == "__main__":
     labels = load_labels(label_file)
 
     # Info
+    classification = dict(zip(labels, results))
     logger.info(f"Classification: {dict(zip(labels, results))}")
+    with open(os.path.join("logs", datetime.datetime.now().isoformat() + ".json"), 'w') as f:
+        f.write(json.dumps(classification))
 
     for i in top_k:
         logger.info(labels[i], results[i])
