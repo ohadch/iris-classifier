@@ -55,11 +55,9 @@ def subprocess_classification(graph_path, labels_path, image_path):
     # Decode the output
     output = out.decode()
     raw_classification = out.decode().split("\n\n")[-1].strip()
-    logger.info(f"OUTPUT: {output}")
 
     # Check empty classification
     if output == '' or output is None:
-        logger.error(err)
         raise ValueError("Classification was not produced")
 
     # Parse the result

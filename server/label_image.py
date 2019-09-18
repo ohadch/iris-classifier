@@ -22,6 +22,8 @@ import argparse
 import numpy as np
 import tensorflow as tf
 
+from logger import logger
+
 
 def load_graph(model_file):
     graph = tf.Graph()
@@ -138,6 +140,8 @@ if __name__ == "__main__":
 
     # Info
     classification = dict(zip(labels, results))
+    import json
+    logger.info(json.dumps(classification))
 
     for i in top_k:
         print(labels[i], results[i])
