@@ -137,6 +137,10 @@ if __name__ == "__main__":
 
     top_k = results.argsort()[-5:][::-1]
     labels = load_labels(label_file)
+
+    # Info
+    logger.info(f"Classification: {dict(zip(labels, results))}")
+
     for i in top_k:
         logger.info(labels[i], results[i])
         print(labels[i], results[i])

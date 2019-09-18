@@ -12,4 +12,4 @@ ALLOWED_IMG_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 UPLOAD_FOLDER = os.path.join(os.getcwd(), "uploads")
 MODELS_FOLDER = os.path.join(os.getcwd(), "trained_models")
 
-VERSION = '1.0.0'
+VERSION = '1.0.1'
