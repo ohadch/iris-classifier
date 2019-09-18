@@ -4,4 +4,7 @@ echo "Restarting the docker services"
 docker-compose down;
 docker-compose rm;
 
+# Remove the old image
+docker rmi -f server_flask
+
 docker-compose up -d;

@@ -24,7 +24,7 @@ def classify(image_path: str, dataset_name) -> dict:
         raise ValueError(f"Graph does not exist: {graph_path}")
 
     if not os.path.exists(labels_path):
-        raise ValueError(f"Labels do not exist: {graph_path}")
+        raise ValueError(f"Labels do not exist: {labels_path}")
 
     # Classify the image
     logger.info(f"Classifying: {image_path}, model path: {graph_path}")
@@ -39,13 +39,17 @@ def classify(image_path: str, dataset_name) -> dict:
     ], stdout=subprocess.PIPE, shell=False)
     out, err = p.communicate()
 
-    # result = out.split('\n')
     if err is not None:
         raise RuntimeError(err)
 
     # Decode the output
     output = out.decode()
     logger.info(f"OUTPUT: {output}")
+
+    # Check empty classification
+    if output == '' or output is None:
+        logger.error(err)
+        raise ValueError("Classification was not produced")
 
     # Parse the result
     classification = dict([re.compile(r"\s+").split(foo) for foo in output.strip().split("\n")])
