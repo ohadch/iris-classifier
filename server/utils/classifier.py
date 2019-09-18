@@ -3,9 +3,10 @@ import re
 import subprocess
 import sys
 
-from pprint import pprint
+from pprint import pformat
 from settings import MODELS_FOLDER
 
+from logger import logger
 
 def classify(image_path: str, dataset_name) -> dict:
     """
@@ -21,7 +22,7 @@ def classify(image_path: str, dataset_name) -> dict:
         raise ValueError(f"Model does not exist: {model_path}")
 
     # Classify the image
-    print(f"Classifying: {image_path}, model path: {model_path}")
+    logger.info(f"Classifying: {image_path}, model path: {model_path}")
     p = subprocess.Popen([
         sys.executable,
         "label_image.py",
@@ -37,12 +38,12 @@ def classify(image_path: str, dataset_name) -> dict:
     if err is not None:
         raise RuntimeError(err)
 
+    # Decode the output
     output = out.decode()
-    print(f"OUTPUT: {output}")
+    logger.info(f"OUTPUT: {output}")
 
-
-    # Classify the image
-    classification = dict([re.compile(r"\s+").split(foo) for foo in .strip().split("\n")])
-    pprint(classification)
+    # Parse the result
+    classification = dict([re.compile(r"\s+").split(foo) for foo in output.strip().split("\n")])
+    logger.info(pformat(classification))
 
     return classification
