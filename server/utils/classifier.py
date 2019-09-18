@@ -26,6 +26,12 @@ def classify(image_path: str, dataset_name) -> dict:
     if not os.path.exists(labels_path):
         raise ValueError(f"Labels do not exist: {labels_path}")
 
+    classification = subprocess_classification(graph_path, labels_path, image_path)
+
+    return classification
+
+
+def subprocess_classification(graph_path, labels_path, image_path):
     # Classify the image
     logger.info(f"Classifying: {image_path}, model path: {graph_path}")
 
