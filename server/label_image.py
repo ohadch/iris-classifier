@@ -22,6 +22,8 @@ import argparse
 import numpy as np
 import tensorflow as tf
 
+from logger import logger
+
 
 def load_graph(model_file):
   graph = tf.Graph()
@@ -136,4 +138,4 @@ if __name__ == "__main__":
   top_k = results.argsort()[-5:][::-1]
   labels = load_labels(label_file)
   for i in top_k:
-    print(labels[i], results[i])
+    logger.info(labels[i], results[i])
