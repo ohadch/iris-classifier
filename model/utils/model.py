@@ -5,7 +5,7 @@ import sys
 from settings import DATASETS_FOLDER, TRAINING_STEPS, TRAINED_MODEL_FOLDER
 
 
-def train(dataset_name: str) -> dict:
+def train(dataset_name: str):
     """
     Trains the model based on the input dataset
     :param dataset_name: The path to the dataset train data
@@ -15,6 +15,7 @@ def train(dataset_name: str) -> dict:
     dataset_folder = os.path.join(DATASETS_FOLDER, dataset_name)
     retrained_graph_path = os.path.join(TRAINED_MODEL_FOLDER, f"{dataset_name}_graph.pb")
     retrained_labels_path = os.path.join(TRAINED_MODEL_FOLDER, f"{dataset_name}_labels.txt")
+    bottlenecks_dir = os.path.join(TRAINED_MODEL_FOLDER, f"{dataset_name}_bottlenecks")
 
     # Validate dataset folder exists
     if not os.path.exists(dataset_folder):
@@ -25,7 +26,7 @@ def train(dataset_name: str) -> dict:
     p = subprocess.Popen([
         sys.executable,
         "retrain.py",
-        "--bottleneck_dir=bottlenecks",
+        f"--bottleneck_dir={bottlenecks_dir}",
         "--how_many_training_steps",
         str(TRAINING_STEPS),
         "--model_dir=inception",

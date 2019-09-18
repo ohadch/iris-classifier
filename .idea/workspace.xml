@@ -2,56 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef9e0a60-abc7-48c1-8505-631119cc0e50" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/model/utils/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dockerignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/favicon2.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/static/css/app.adb4387f.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/static/css/chunk-vendors.9295709c.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/static/js/app.0494271b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/static/js/chunk-vendors.9f7580e7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/label_image.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrained_labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/classifier.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/upload.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/.browserslistrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/.eslintrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/babel.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/postcss.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/public/favicon2.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/App.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/api/classifyImage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/assets/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/assets/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/components/ClassificationSummary.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/components/ImageUpload.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/components/ModelTraining.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/plugins/vuetify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/router.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/store.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/views/Home.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/vue.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/utils/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/utils/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/deploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/server/deploy.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/trained_models/flower_photos_graph.pb" beforeDir="false" afterPath="$PROJECT_DIR$/server/trained_models/flower_photos_graph.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/trained_models/flower_photos_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/trained_models/flower_photos_labels.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/utils/classifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/utils/classifier.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,6 +68,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <EXTENSION ID="net.ashald.envfile">
         <option name="IS_ENABLED" value="false" />
         <option name="IS_SUBST" value="false" />
@@ -142,6 +100,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <EXTENSION ID="net.ashald.envfile">
         <option name="IS_ENABLED" value="false" />
         <option name="IS_SUBST" value="false" />
@@ -177,6 +136,7 @@
       <option name="presentableId" value="Default" />
       <updated>1568726900554</updated>
       <workItem from="1568743023671" duration="17000" />
+      <workItem from="1568811788651" duration="292000" />
     </task>
     <task id="LOCAL-00001" summary="Adds tensorflow files">
       <created>1568743931564</created>
@@ -376,6 +336,9 @@
     </task>
     <option name="localTasksCounter" value="29" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

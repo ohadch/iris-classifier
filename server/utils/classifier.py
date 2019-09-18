@@ -28,7 +28,8 @@ def classify(image_path: str, dataset_name) -> dict:
 
     # Classify the image
     logger.info(f"Classifying: {image_path}, model path: {graph_path}")
-    p = subprocess.Popen([
+
+    cmd = [
         sys.executable,
         "label_image.py",
         f"--graph={graph_path}",
@@ -36,7 +37,10 @@ def classify(image_path: str, dataset_name) -> dict:
         f"--labels={labels_path}",
         "--output_layer=final_result",
         "--input_layer=Placeholder"
-    ], stdout=subprocess.PIPE, shell=False)
+    ]
+
+    p = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=False)
+    logger.info(f"Cmd: {' '.join(cmd)}")
     out, err = p.communicate()
 
     if err is not None:
