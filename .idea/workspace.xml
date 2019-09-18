@@ -2,11 +2,56 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef9e0a60-abc7-48c1-8505-631119cc0e50" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/utils/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dockerignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/environment.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrained_graph.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/favicon2.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/static/css/app.adb4387f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/static/css/chunk-vendors.9295709c.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/static/js/app.0494271b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/static/js/chunk-vendors.9f7580e7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/label_image.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/retrain.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/retrained_labels.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/classifier.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/upload.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/.browserslistrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/.eslintrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/babel.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/postcss.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/public/favicon2.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/api/classifyImage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/assets/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/components/ClassificationSummary.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/components/ImageUpload.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/components/ModelTraining.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/plugins/vuetify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/router.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/views/Home.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/vue.config.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +80,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/exp.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\ohad\code\git\iris-classifier" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -317,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568760563416</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Adds readme">
+      <created>1568793653478</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1568793653478</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -356,7 +413,8 @@
     <MESSAGE value="Updates the email" />
     <MESSAGE value="Adds dockerignore" />
     <MESSAGE value="Updates the dockerfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updates the dockerfile" />
+    <MESSAGE value="Adds readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adds readme" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -365,10 +423,6 @@
           <url>file://$PROJECT_DIR$/utils/classifier.py</url>
           <line>34</line>
           <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/settings.py</url>
-          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
