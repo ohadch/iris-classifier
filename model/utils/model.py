@@ -2,7 +2,7 @@ import os
 import subprocess
 import sys
 
-from settings import DATASETS_FOLDER, TRAINING_STEPS
+from settings import DATASETS_FOLDER, TRAINING_STEPS, TRAINED_MODEL_FOLDER
 
 
 def train(dataset_name: str) -> dict:
@@ -11,19 +11,16 @@ def train(dataset_name: str) -> dict:
     :param dataset_name: The path to the dataset train data
     :return: The image classification
     """
+    # Paths
     dataset_folder = os.path.join(DATASETS_FOLDER, dataset_name)
+    retrained_graph_path = os.path.join(TRAINED_MODEL_FOLDER, f"{dataset_name}_graph.pb")
+    retrained_labels_path = os.path.join(TRAINED_MODEL_FOLDER, f"{dataset_name}_labels.txt")
 
+    # Validate dataset folder exists
     if not os.path.exists(dataset_folder):
         raise ValueError(f"Dataset does not exist: {dataset_name}")
 
-    # python3
-    # retrain.py --bottleneck_dir = bottlenecks --how_many_training_steps
-    # 500 --model_dir = inception --output_graph = retrained_graph.pb --output_labels = retrained_labels.txt --image_dir
-    # flower_photos /
-
-    retrained_graph_path = os.path.abspath(os.path.join("..", "trained_models", f"{dataset_name}_graph.pb"))
-    retrained_labels_path = os.path.abspath(os.path.join("..", "trained_models", f"{dataset_name}_labels.txt"))
-
+    # Train the model
     print(f"Training {dataset_name}, folder = {dataset_folder}")
     p = subprocess.Popen([
         sys.executable,
