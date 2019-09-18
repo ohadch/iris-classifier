@@ -37,8 +37,12 @@ def classify(image_path: str, dataset_name) -> dict:
     if err is not None:
         raise RuntimeError(err)
 
+    output = out.decode()
+    print(f"OUTPUT: {output}")
+
+
     # Classify the image
-    classification = dict([re.compile(r"\s+").split(foo) for foo in out.decode().strip().split("\n")])
+    classification = dict([re.compile(r"\s+").split(foo) for foo in .strip().split("\n")])
     pprint(classification)
 
     return classification
