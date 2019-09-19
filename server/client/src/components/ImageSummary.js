@@ -1,9 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 
-export default function ImageSummary() {
-  const [classification] = useState(null);
+export default function ImageSummary({ image }) {
+  console.log({ image });
+
+  let reader;
+  let imageComponent;
+  if (image) {
+    reader = new FileReader();
+    reader.readAsDataURL(new Blob(image));
+    imageComponent = <img src={reader.resultl} alt="preview" />; // in constructor don't initilazie with array instaed with blank string
+  }
 
   return (
     <Grid>
@@ -11,7 +19,7 @@ export default function ImageSummary() {
         Image Summary
       </Typography>
 
-      {classification ? <Grid>Classification</Grid> : ""}
+      {image ? imageComponent : ""}
     </Grid>
   );
 }
