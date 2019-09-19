@@ -5,8 +5,8 @@ import ImageSummary from "./ImageSummary";
 export default function UploadedImages({ images }) {
   return (
     <Grid>
-      {images.map(image => (
-        <ImageSummary image={image}></ImageSummary>
+      {images.map((image, i) => (
+        <ImageSummary key={i} image={image}></ImageSummary>
       ))}
     </Grid>
   );
