@@ -140,8 +140,7 @@ if __name__ == "__main__":
 
     # Info
     classification = dict(zip(labels, results))
-    import json
-    logger.info(json.dumps(classification))
+    logger.info(str(classification))
 
     for i in top_k:
         print(labels[i], results[i])
