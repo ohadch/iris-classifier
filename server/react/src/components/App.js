@@ -50,7 +50,7 @@ export default function App() {
 
   const onDrop = image => {
     console.log(image);
-    setImages([...images, image]);
+    setImages([...images, image[0]]);
   };
 
   return (

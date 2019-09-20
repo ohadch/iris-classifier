@@ -9,14 +9,14 @@ export default function ImageSummary({ image }) {
   let imageComponent;
   if (image) {
     reader = new FileReader();
-    reader.readAsDataURL(new Blob(image));
+    reader.readAsDataURL(image);
     imageComponent = <img src={reader.resultl} alt="preview" />; // in constructor don't initilazie with array instaed with blank string
   }
 
   return (
     <Card style={{textAlign: 'center'}}>
-      <Typography component="h3" variant="h4" align="center">
-        Image Summary
+      <Typography component="h5" variant="h5" align="center">
+        { image.name }
       </Typography>
 
       {image ? imageComponent : ""}
