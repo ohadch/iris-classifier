@@ -9,6 +9,10 @@ else
   cd .. || exit;
 fi
 
+# Build the UI
+echo "Building React"
+cd react && npm i && npm run build && cd ..
+
 echo "Restarting the docker services"
 
 # Shut down the docker
