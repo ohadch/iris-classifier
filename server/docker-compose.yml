@@ -3,7 +3,7 @@ services:
   flask:
     build:
       context: .
-      dockerfile: Dockerfile-with-conda
+      dockerfile: Dockerfile
     environment:
       - PORT=8000
     ports:
