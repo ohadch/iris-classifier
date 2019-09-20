@@ -49,6 +49,9 @@ export default function App() {
   const [images, setImages] = useState([]);
 
   const onDrop = acceptedFiles => {
+
+    for (let file of acceptedFiles) {}
+
     setImages(
       acceptedFiles.map(file =>
         Object.assign(file, {
