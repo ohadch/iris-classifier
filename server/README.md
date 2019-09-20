@@ -20,3 +20,6 @@ https://medium.com/@umairnadeem/deploy-to-aws-using-docker-compose-simple-210d71
 
 `scp -r -i imagecl2.pem /mnt/c/ohad/iris-classifier/server ec2-user@34.214.42.11:~/`
 `ssh -i imagecl2.pem ec2-user@34.214.42.11`
+
+### Deploy to AWS cluster
+https://getstream.io/blog/deploying-the-winds-api-to-aws-ecs-with-docker-compose/
