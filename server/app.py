@@ -11,8 +11,8 @@ from logger import logger
 
 # initialize flask application
 app = Flask(__name__,
-            static_folder="./dist/static",
-            template_folder="./dist")
+            static_folder="./react/build/static",
+            template_folder="./react/build")
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 logger.info(f"App version: {VERSION}")
