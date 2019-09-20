@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ef9e0a60-abc7-48c1-8505-631119cc0e50" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/server.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="ef9e0a60-abc7-48c1-8505-631119cc0e50" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,6 +129,7 @@
       <updated>1568726900554</updated>
       <workItem from="1568743023671" duration="17000" />
       <workItem from="1568811788651" duration="841000" />
+      <workItem from="1568995942648" duration="502000" />
     </task>
     <task id="LOCAL-00001" summary="Adds tensorflow files">
       <created>1568743931564</created>
@@ -337,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568812168433</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Styles the UI">
+      <created>1568995971361</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1568995971362</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,7 +385,8 @@
     <MESSAGE value="Updates the dockerfile" />
     <MESSAGE value="Adds readme" />
     <MESSAGE value="Creates conda image if not exists" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creates conda image if not exists" />
+    <MESSAGE value="Styles the UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Styles the UI" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
