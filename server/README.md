@@ -17,3 +17,4 @@ If using docker toolbox (windows 10), the app will probably be hosted on http://
 
 ### Deploy to AWS EC2
 `scp -r -i imagecl2.pem /mnt/c/ohad/iris-classifier/server ec2-user@34.214.42.11:~/`
+`ssh -i imagecl2.pem ec2-user@34.214.42.11`
