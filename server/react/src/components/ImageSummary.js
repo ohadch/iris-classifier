@@ -2,24 +2,37 @@ import React from "react";
 import Typography from "@material-ui/core/Typography";
 import { Card } from "@material-ui/core";
 
-export default function ImageSummary({ image }) {
-  console.log({ image });
 
-  let reader;
-  let imageComponent;
-  if (image) {
-    reader = new FileReader();
-    reader.readAsDataURL(image);
-    imageComponent = <img src={reader.resultl} alt="preview" />; // in constructor don't initilazie with array instaed with blank string
-  }
+const thumb = {
+  display: "inline-flex",
+  borderRadius: 2,
+  border: "1px solid #eaeaea",
+  marginBottom: 8,
+  marginRight: 8,
+  width: 100,
+  height: 100,
+  padding: 4,
+  boxSizing: "border-box"
+};
 
+const thumbInner = {
+  display: "flex",
+  minWidth: 0,
+  overflow: "hidden"
+};
+
+const img = {
+  display: "block",
+  width: "auto",
+  height: "100%"
+};
+
+export default function ImageSummary({ file }) {
   return (
-    <Card style={{textAlign: 'center'}}>
-      <Typography component="h5" variant="h5" align="center">
-        { image.name }
-      </Typography>
-
-      {image ? imageComponent : ""}
-    </Card>
+    <div style={thumb} key={file.name}>
+      <div style={thumbInner}>
+        <img src={file.preview} style={img} alt="preview" />
+      </div>
+    </div>
   );
 }

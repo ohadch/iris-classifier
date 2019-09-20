@@ -1,14 +1,30 @@
-import React from "react";
-import ImageUploader from "react-images-upload";
+import React, { useEffect, useState } from "react";
+import { useDropzone } from "react-dropzone";
+
 
 export default function Dropzone({onDrop}) {
-    return (
-      <ImageUploader
-        withIcon={true}
-        buttonText="Choose images"
-        onChange={onDrop}
-        imgExtension={[".jpg", ".gif", ".png", ".gif"]}
-        maxFileSize={5242880}
-      />
-    );
+  const [files, setFiles] = useState([]);
+  
+  const { getRootProps, getInputProps } = useDropzone({
+    accept: "image/*",
+    onDrop,
+  });
+
+  
+  useEffect(
+    () => () => {
+      // Make sure to revoke the data uris to avoid memory leaks
+      files.forEach(file => URL.revokeObjectURL(file.preview));
+    },
+    [files]
+  );
+
+  return (
+    <section className="container">
+      <div {...getRootProps({ className: "dropzone" })}>
+        <input {...getInputProps()} />
+        <p>Drag 'n' drop some files here, or click to select files</p>
+      </div>
+    </section>
+  );
 }

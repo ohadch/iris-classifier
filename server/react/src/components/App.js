@@ -48,10 +48,15 @@ export default function App() {
   const classes = useStyles();
   const [images, setImages] = useState([]);
 
-  const onDrop = image => {
-    console.log(image);
-    setImages([...images, image[0]]);
-  };
+  const onDrop = acceptedFiles => {
+    setImages(
+      acceptedFiles.map(file =>
+        Object.assign(file, {
+          preview: URL.createObjectURL(file)
+        })
+      )
+    );
+  }
 
   return (
     <React.Fragment>
