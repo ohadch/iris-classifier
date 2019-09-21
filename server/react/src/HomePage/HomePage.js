@@ -9,11 +9,11 @@ function HomePage({ user }) {
 
   const onDrop = acceptedFiles => {
     setImages(
-      acceptedFiles.map(file =>
+      [...images, ...acceptedFiles.map(file =>
         Object.assign(file, {
           preview: URL.createObjectURL(file)
         })
-      )
+      )]
     );
   };
 

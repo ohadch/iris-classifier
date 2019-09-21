@@ -5,6 +5,7 @@ import ImageSummary from "./ImageSummary";
 const thumbsContainer = {
   display: "flex",
   flexDirection: "row",
+  justifyContent: "space-between",
   flexWrap: "wrap",
   marginTop: 16
 };
@@ -12,7 +13,7 @@ const thumbsContainer = {
 
 export default function UploadedImages({ images }) {
   const thumbs = images.map(file => (
-    <ImageSummary file={file} />
+    <ImageSummary style={{marginBottom: "5px"}} file={file} />
   ));
 
   return (
