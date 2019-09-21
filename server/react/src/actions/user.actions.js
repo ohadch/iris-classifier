@@ -16,6 +16,8 @@ function login(username, password) {
                 user => { 
                     dispatch(success(user));
                     history.push('/');
+                    /* eslint-disable */
+                    location.reload();
                 },
                 error => {
                     dispatch(failure(error));
