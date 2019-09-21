@@ -21,15 +21,12 @@ function login(username, password) {
         dispatch(request({
             username
         }));
-        const {
-            user,
-            error
-        } = await userService.login(username, password)
+        const user = await userService.login(username, password)
 
-        if (error) {
-            dispatch(failure(error));
-            dispatch(alertActions.error(error));
-            alert(error)
+        if (user.error) {
+            dispatch(failure(user.error));
+            dispatch(alertActions.error(user.error));
+            alert(user.error)
             return;
         } else {
             dispatch(success(user));
