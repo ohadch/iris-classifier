@@ -14,10 +14,12 @@ class UserRegistration(Resource):
         if UserModel.find_by_username(data['username']):
             return {'message': 'User {} already exists'.format(data['username'])}
 
+        # Create new user with password hash
         new_user = UserModel(
             username=data['username'],
-            password=data['password']
+            password=UserModel.generate_hash(data['password'])
         )
+
         try:
             new_user.save_to_db()
             return {
@@ -31,10 +33,13 @@ class UserLogin(Resource):
     def post(self):
         data = parser.parse_args()
         current_user = UserModel.find_by_username(data['username'])
+
+        # Raise if user does not exist
         if not current_user:
             return {'message': 'User {} doesn\'t exist'.format(data['username'])}
 
-        if data['password'] == current_user.password:
+        # Verify the user's password
+        if UserModel.verify_hash(data['password'], current_user.password):
             return {'message': 'Logged in as {}'.format(current_user.username)}
         else:
             return {'message': 'Wrong credentials'}
