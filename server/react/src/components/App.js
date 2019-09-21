@@ -3,14 +3,11 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { connect } from "react-redux";
 
 import { history } from "../helpers";
-import { alertActions } from "../actions";
+import { userActions } from "../actions";
 import { PrivateRoute } from "../components";
 import { HomePage } from "../HomePage";
 import { LoginPage } from "../LoginPage";
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-
-import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import AppBar from "@material-ui/core/AppBar";
@@ -34,6 +31,12 @@ const useStyles = makeStyles(theme => ({
 function App({ user }) {
   const classes = useStyles();
 
+  const logout = () => {
+    userActions.logout();
+    /* eslint-disable */
+    location.reload();
+  }
+
   return (
     <React.Fragment>
       <Router history={history}>
@@ -52,7 +55,7 @@ function App({ user }) {
               <Typography variant="h6" className={classes.title}>
                 Iris Classifier
               </Typography>
-              {user ? <Button className={classes.menuButton}>Logout</Button> : ''}
+              {user ? <Button className={classes.menuButton} onClick={logout}>Logout</Button> : ''}
             </Toolbar>
           </AppBar>
         </div>
