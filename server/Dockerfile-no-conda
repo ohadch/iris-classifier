@@ -1,4 +1,4 @@
-FROM conda-imagecl
+FROM ohadch/conda-imagecl
 LABEL maintainer="Ohad Chaet <ohadch9518@gmail.com>"
 
 COPY . /app

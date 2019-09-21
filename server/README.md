@@ -8,19 +8,19 @@
 - deployment: docker-compose/AWS
 
 ### Requirements:
-- [X] The image is classiafied using tensorflow model
 - [X] UI is written in react
 - [X] Server is written in python/flask
 - [X] Server side supports authentication
 - [X] Client side supports authentication
 - [X] User can upload images to be classified
+- [X] The image is classiafied using tensorflow model
 - [X] User's classification history is saved in postgres
 - [ ] User can view his image classification history
 - [X] Add tests
 - [ ] Add CircleCI
-- [ ] The app is served using docker-compose
-- [ ] The app is deployed using AWS EKS cluster
+- [X] The app is served using docker-compose
 - [ ] Model is served using tensorflow-serving
+- [ ] The app is deployed using AWS EKS cluster
 
 ### Bugs:
 - [ ] Classification in docker container is empty string
