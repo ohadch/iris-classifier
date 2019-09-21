@@ -9,6 +9,11 @@ parser.add_argument('password', help='This field cannot be blank', required = Tr
 class UserRegistration(Resource):
     def post(self):
         data = parser.parse_args()
+
+        # Fail if user already exists
+        if UserModel.find_by_username(data['username']):
+            return {'message': 'User {} already exists'.format(data['username'])}
+
         new_user = UserModel(
             username=data['username'],
             password=data['password']
