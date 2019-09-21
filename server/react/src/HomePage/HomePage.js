@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import { Grid } from '@material-ui/core';
+import Dropzone from './../components/Dropzone';
+import UploadedImages from './../components/UploadedImages';
 
 function HomePage({ user }) {
   const [images, setImages] = useState([]);
@@ -16,9 +18,12 @@ function HomePage({ user }) {
   };
 
   return (
-    <div className="col-md-6 col-md-offset-3">
-      Home Page
-    </div>
+    <Grid>
+      <Grid>
+        <Dropzone onDrop={onDrop} />
+        <UploadedImages images={images} />
+      </Grid>
+    </Grid>
   );
 }
 

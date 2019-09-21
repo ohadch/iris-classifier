@@ -60,7 +60,7 @@ function App({ user }) {
           </AppBar>
         </div>
         <main className={classes.layout}>
-          <div>
+          <div style={{padding: "10px"}}>
             <PrivateRoute exact path="/" component={HomePage} />
             <Route path="/login" component={LoginPage} />
           </div>
