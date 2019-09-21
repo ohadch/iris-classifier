@@ -16,3 +16,4 @@ logger.info(f"App version: {VERSION}")
 
 
 db = SQLAlchemy(app)
+
