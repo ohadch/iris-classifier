@@ -14,7 +14,7 @@ export default function ImageSummary({ file }) {
   useEffect(() => {
     async function fetchData() {
       const { classification: res } = await classifyImage(file);
-      setClassification(Object.entries(res));
+      setClassification(res);
     }
 
     fetchData();
@@ -28,7 +28,7 @@ export default function ImageSummary({ file }) {
           {classification ? (
             <ClassificationSummary classifications={classification} />
           ) : (
-            <p>Loading...</p>
+            <p>Classifying...</p>
           )}
         </Box>
       </Grid>

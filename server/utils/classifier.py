@@ -1,5 +1,5 @@
 import os
-import re
+import json
 import subprocess
 import sys
 
@@ -62,7 +62,7 @@ def subprocess_classification(graph_path, labels_path, image_path):
         raise ValueError("Classification was not produced")
 
     # Parse the result
-    classification = dict([re.compile(r"\s+").split(foo) for foo in raw_classification.split("\n")])
+    classification = json.loads(raw_classification)
     logger.info(pformat(classification))
 
-    return classification
+    return [x for x in classification[0].items()]

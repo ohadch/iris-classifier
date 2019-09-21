@@ -18,7 +18,7 @@ from __future__ import division
 from __future__ import print_function
 
 import argparse
-
+import pandas as pd
 import numpy as np
 import tensorflow as tf
 
@@ -138,18 +138,19 @@ if __name__ == "__main__":
         # results = sess.run(output_operation.outputs[0], {
         #     input_operation.outputs[0]: t
         # })
-        # results = np.squeeze(results)
 
+        results = np.squeeze(results)
         top_k = results.argsort()[-5:][::-1]
         labels = load_labels(label_file)
 
         # Info
         classification = dict(zip(labels, results))
         logger.info(str(classification))
+        as_json = pd.DataFrame(classification, index=[0]).to_json(orient='records')
 
-        for i in top_k:
-            print(labels[i], results[i])
+        print(as_json)
     except Exception as e:
-        logger.error("============ !!! Error !!! ============ ")
+        logger.error("============ !!! Error Start !!! ============ ")
         logger.error(e)
+        logger.error("============ !!! Error End !!! ============ ")
         raise e
