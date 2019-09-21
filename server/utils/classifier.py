@@ -46,7 +46,6 @@ def subprocess_classification(graph_path, labels_path, image_path):
     ]
 
     p = subprocess.Popen(cmd, shell=False, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-    logger.info(f"Cmd: {' '.join(cmd)}")
     out, err = p.communicate()
 
     if err is not None:

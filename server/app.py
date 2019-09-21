@@ -24,7 +24,7 @@ def log_request_info():
 
 
 @app.route('/')
-def catch_all():
+def react():
     return render_template("index.html")
 
 
