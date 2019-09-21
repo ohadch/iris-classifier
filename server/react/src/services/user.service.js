@@ -3,7 +3,6 @@ import { authHeader } from '../helpers';
 export const userService = {
     login,
     logout,
-    getAll
 };
 
 function login(username, password) {
@@ -26,15 +25,6 @@ function login(username, password) {
 function logout() {
     // remove user from local storage to log user out
     localStorage.removeItem('user');
-}
-
-function getAll() {
-    const requestOptions = {
-        method: 'GET',
-        headers: authHeader()
-    };
-
-    return fetch(`$/users`, requestOptions).then(handleResponse);
 }
 
 function handleResponse(response) {

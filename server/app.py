@@ -22,9 +22,9 @@ def create_tables():
     db.create_all()
 
 
-@app.before_request
-def log_request_info():
-    app.logger.debug('Headers: %s', request.headers)
+# @app.before_request
+# def log_request_info():
+#     app.logger.debug('Headers: %s', request.headers)
 
 
 @jwt.token_in_blacklist_loader
