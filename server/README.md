@@ -19,8 +19,8 @@
 - [ ] Add tests
 - [ ] Add CircleCI
 - [ ] The app is served using docker-compose
-- [ ] The app is deployed using AWS cluster
-- [ ] Model is served using tensorflow-serving 
+- [ ] The app is deployed using AWS EKS cluster
+- [ ] Model is served using tensorflow-serving
 
 ### Bugs:
 - [ ] Classification in docker container is empty string
