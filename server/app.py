@@ -1,21 +1,14 @@
 import os
 
-from flask import Flask, jsonify, request, render_template
+from flask import jsonify, request, render_template
 from werkzeug.utils import secure_filename
 
-from settings import HOST, PORT, UPLOAD_FOLDER, VERSION, DEBUG
+from _sqlalchemy import app
+from settings import HOST, PORT, DEBUG
 from utils.upload import allowed_file
 from utils.classifier import classify
 
 from logger import logger
-
-# initialize flask application
-app = Flask(__name__,
-            static_folder="./react/build/static",
-            template_folder="./react/build")
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-
-logger.info(f"App version: {VERSION}")
 
 
 @app.before_request
