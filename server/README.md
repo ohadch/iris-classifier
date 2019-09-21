@@ -12,7 +12,8 @@
 - [X] The image is classiafied using tensorflow model
 - [X] UI is written in react
 - [X] Server is written in python/flask
-- [ ] User can authenticate to the app
+- [X] Server side supports authentication
+- [ ] Client side supports authentication
 - [ ] User's classification history is saved in postgres
 - [ ] The app is served using docker-compose
 - [ ] The app is deployed using AWS cluster
