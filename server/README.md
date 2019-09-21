@@ -16,7 +16,7 @@
 - [X] User can upload images to be classified
 - [X] User's classification history is saved in postgres
 - [ ] User can view his image classification history
-- [ ] Add tests
+- [X] Add tests
 - [ ] Add CircleCI
 - [ ] The app is served using docker-compose
 - [ ] The app is deployed using AWS EKS cluster
