@@ -3,7 +3,7 @@ import os
 from flask import Flask, jsonify, request, render_template
 from werkzeug.utils import secure_filename
 
-from settings import HOST, PORT, UPLOAD_FOLDER, VERSION
+from settings import HOST, PORT, UPLOAD_FOLDER, VERSION, DEBUG
 from utils.upload import allowed_file
 from utils.classifier import classify
 
@@ -54,4 +54,4 @@ def upload_file():
 
 
 if __name__ == '__main__':
-    app.run(host=HOST, port=PORT)
+    app.run(host=HOST, port=PORT, debug=DEBUG)
