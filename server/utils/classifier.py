@@ -1,5 +1,5 @@
 import os
-import re
+import json
 import subprocess
 import sys
 
@@ -46,7 +46,6 @@ def subprocess_classification(graph_path, labels_path, image_path):
     ]
 
     p = subprocess.Popen(cmd, shell=False, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-    logger.info(f"Cmd: {' '.join(cmd)}")
     out, err = p.communicate()
 
     if err is not None:
@@ -54,16 +53,16 @@ def subprocess_classification(graph_path, labels_path, image_path):
 
     # Decode the output
     output = out.decode()
+    logger.info(f"=========== Output start ===========\n{output}\n=========== Output end ===========")
+
     raw_classification = out.decode().split("\n\n")[-1].strip()
-    logger.info(f"OUTPUT: {output}")
 
     # Check empty classification
     if output == '' or output is None:
-        logger.error(err)
         raise ValueError("Classification was not produced")
 
     # Parse the result
-    classification = dict([re.compile(r"\s+").split(foo) for foo in raw_classification.split("\n")])
+    classification = json.loads(raw_classification)
     logger.info(pformat(classification))
 
-    return classification
+    return [x for x in classification[0].items()]

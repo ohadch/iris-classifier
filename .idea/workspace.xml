@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/server.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/react/src/components/ImageSummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/react/src/components/ImageSummary.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,9 +92,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="wsl://UBUNTU1804/home/ohadch/anaconda3/envs/imagecl/bin/python3" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/server" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -133,6 +134,7 @@
       <updated>1568726900554</updated>
       <workItem from="1568743023671" duration="17000" />
       <workItem from="1568811788651" duration="841000" />
+      <workItem from="1568995942648" duration="745000" />
     </task>
     <task id="LOCAL-00001" summary="Adds tensorflow files">
       <created>1568743931564</created>
@@ -337,7 +339,21 @@
       <option name="project" value="LOCAL" />
       <updated>1568812168433</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Styles the UI">
+      <created>1568995971361</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1568995971362</updated>
+    </task>
+    <task id="LOCAL-00031" summary="ImageSummary is fetching image classification">
+      <created>1568996465915</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1568996465915</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,7 +373,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adds tensorflow files" />
     <MESSAGE value="Adds upload file route" />
     <MESSAGE value="Uploads a file" />
     <MESSAGE value="Adds classification model" />
@@ -381,7 +396,9 @@
     <MESSAGE value="Updates the dockerfile" />
     <MESSAGE value="Adds readme" />
     <MESSAGE value="Creates conda image if not exists" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creates conda image if not exists" />
+    <MESSAGE value="Styles the UI" />
+    <MESSAGE value="ImageSummary is fetching image classification" />
+    <option name="LAST_COMMIT_MESSAGE" value="ImageSummary is fetching image classification" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -400,6 +417,6 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/iris_classifier$server.coverage" NAME="server Coverage Results" MODIFIED="1568812545994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server" />
+    <SUITE FILE_PATH="coverage/iris_classifier$server.coverage" NAME="server Coverage Results" MODIFIED="1568996645654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server" />
   </component>
 </project>

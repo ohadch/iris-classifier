@@ -1,57 +1,55 @@
-import os
+import resources
 
-from flask import Flask, jsonify, request, render_template
-from werkzeug.utils import secure_filename
+from flask import jsonify, render_template
+from flask_restful import Api
+from flask_jwt_extended import jwt_required
+from _sqlalchemy import app, db, jwt, RevokedTokenModel
+from settings import HOST, PORT, DEBUG
 
-from settings import HOST, PORT, UPLOAD_FOLDER, VERSION
-from utils.upload import allowed_file
-from utils.classifier import classify
-
-from logger import logger
-
-# initialize flask application
-app = Flask(__name__,
-            static_folder="./dist/static",
-            template_folder="./dist")
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-
-logger.info(f"App version: {VERSION}")
+api = Api(app)
 
 
-@app.before_request
-def log_request_info():
-    app.logger.debug('Headers: %s', request.headers)
+@app.before_first_request
+def create_tables():
+    # Creates all SQLAlchemy model tables
+    db.create_all()
+
+
+# @app.before_request
+# def log_request_info():
+#     app.logger.debug('Headers: %s', request.headers)
+
+
+@jwt.token_in_blacklist_loader
+def check_if_token_in_blacklist(decrypted_token):
+    jti = decrypted_token['jti']
+    return RevokedTokenModel.is_jti_blacklisted(jti)
 
 
 @app.route('/')
-def catch_all():
+def react():
     return render_template("index.html")
 
 
-@app.route("/api/file", methods=['POST'])
-def upload_file():
-    if request.method == 'POST':
+@app.route('/api')
+def api_home():
+    return jsonify({'message': 'This is Iris Classifier'})
 
-        # check if the post request has the file part
-        if request.files.get('file') is None:
-            return jsonify({'error': 'no file has been provided'})
 
-        file = request.files['file']
+@app.route('/api/test')
+@jwt_required
+def api_test():
+    return jsonify({'message': 'This is Iris Classifier'})
 
-        # Process file if it is allowed
-        if file and allowed_file(file.filename):
-            filename = secure_filename(file.filename)
-            full_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-            file.save(full_path)
 
-            # Classifies the image
-            classification = classify(full_path, 'flower_photos')
-
-            # Removes the uploaded image
-            os.remove(full_path)
-
-            return jsonify({'classification': classification})
-
+api.add_resource(resources.UserRegistration, '/registration')
+api.add_resource(resources.UserLogin, '/login')
+api.add_resource(resources.UserLogoutAccess, '/logout/access')
+api.add_resource(resources.UserLogoutRefresh, '/logout/refresh')
+api.add_resource(resources.TokenRefresh, '/token/refresh')
+api.add_resource(resources.AllUsers, '/users')
+api.add_resource(resources.SecretResource, '/secret')
+api.add_resource(resources.ImageClassification, '/api/classification')
 
 if __name__ == '__main__':
-    app.run(host=HOST, port=PORT)
+    app.run(host=HOST, port=PORT, debug=DEBUG)
