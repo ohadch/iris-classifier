@@ -53,17 +53,6 @@ const useStyles = makeStyles(theme => ({
 
 function App() {
   const classes = useStyles();
-  const [images, setImages] = useState([]);
-
-  const onDrop = acceptedFiles => {
-    setImages(
-      acceptedFiles.map(file =>
-        Object.assign(file, {
-          preview: URL.createObjectURL(file)
-        })
-      )
-    );
-  };
 
   return (
     <React.Fragment>
