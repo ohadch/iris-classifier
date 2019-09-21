@@ -1,5 +1,12 @@
 > Requires anaconda3
 
+### Stack:
+- Backed: python/flask
+- Frontend: react
+- DB: postgres
+- model: tensorflow
+- deployment: docker-compose/AWS
+
 ### Requirements:
 - [X] User can upload images to be classified
 - [X] The image is classified using tensorflow model
