@@ -3,6 +3,7 @@ import resources
 
 from flask import jsonify, request, render_template
 from flask_restful import Api
+from flask_jwt_extended import jwt_required
 
 from werkzeug.utils import secure_filename
 
@@ -32,6 +33,12 @@ def react():
 
 @app.route('/api')
 def api_home():
+    return jsonify({'message': 'This is Iris Classifier'})
+
+
+@app.route('/api/test')
+@jwt_required
+def api_test():
     return jsonify({'message': 'This is Iris Classifier'})
 
 
