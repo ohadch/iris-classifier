@@ -8,16 +8,16 @@
 - deployment: docker-compose/AWS
 
 ### Requirements:
-- [X] User can upload images to be classified
 - [X] The image is classiafied using tensorflow model
 - [X] UI is written in react
 - [X] Server is written in python/flask
 - [X] Server side supports authentication
-- [ ] Client side supports authentication
+- [X] Client side supports authentication
+- [ ] User can upload images to be classified
 - [ ] User's classification history is saved in postgres
 - [ ] The app is served using docker-compose
 - [ ] The app is deployed using AWS cluster
-- [ ] Model is served******** using tensorflow-serving 
+- [ ] Model is served using tensorflow-serving 
 
 ### Bugs:
 - [ ] Classification in the container is empty string
