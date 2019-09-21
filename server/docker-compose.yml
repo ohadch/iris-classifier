@@ -25,7 +25,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - mongo-data:/var/lib/postgresql/data
+      - postgres-data:/var/lib/postgresql/data
 
 volumes:
     postgres-data:
