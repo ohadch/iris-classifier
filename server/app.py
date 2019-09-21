@@ -6,12 +6,18 @@ from flask_restful import Api
 
 from werkzeug.utils import secure_filename
 
-from _sqlalchemy import app
+from _sqlalchemy import app, db
 from settings import HOST, PORT, DEBUG
 from utils.upload import allowed_file
 from utils.classifier import classify
 
 api = Api(app)
+
+
+@app.before_first_request
+def create_tables():
+    # Creates all SQLAlchemy model tables
+    db.create_all()
 
 
 @app.before_request
