@@ -1,0 +1,25 @@
+version: '3'
+services:
+  postgres:
+    image: "postgres"
+    environment:
+      - POSTGRES_USER=imagecl
+      - POSTGRES_PASSWORD=thisisimagecl
+      - POSTGRES_DB=imagecl
+    ports:
+      - "5432:5432"
+    volumes:
+      - mongo-data:/var/lib/postgresql/data
+
+volumes:
+    postgres-data:
+        external: false
+
+#  tensorflow:
+#    image: tensorflow/serving
+#    volumes:
+#      - /serving:/server/trained_models
+#    ports:
+#      - "6379:6379"
+#    environment:
+#      - MODEL_NAME=flowers_classifier
