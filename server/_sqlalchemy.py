@@ -69,6 +69,15 @@ class UserModel(db.Model):
         db.session.commit()
 
 
+class Image(db.Model):
+    __tablename__ = 'images'
+
+    id = db.Column(db.Integer, primary_key=True)
+    server_path = db.Column(db.String(255), unique=True, nullable=False)
+    classification = db.Column(db.String(50), nullable=True)
+    classification_success = db.Column(db.Boolean, nullable=True)
+
+
 class RevokedTokenModel(db.Model):
     __tablename__ = 'revoked_tokens'
     id = db.Column(db.Integer, primary_key=True)

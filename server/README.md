@@ -13,7 +13,7 @@
 - [X] Server is written in python/flask
 - [X] Server side supports authentication
 - [X] Client side supports authentication
-- [ ] User can upload images to be classified
+- [X] User can upload images to be classified
 - [ ] User's classification history is saved in postgres
 - [ ] The app is served using docker-compose
 - [ ] The app is deployed using AWS cluster

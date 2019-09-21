@@ -42,7 +42,6 @@ function ImageSummary({ file, user }) {
 function mapStateToProps(state) {
   const { authentication } = state;
   const { user } = authentication;
-  debugger;
   return {
     user
   };
