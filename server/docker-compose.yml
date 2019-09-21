@@ -6,6 +6,8 @@ services:
       dockerfile: Dockerfile
     environment:
       - PORT=8000
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PORT=5432
     ports:
       - 8000:8000
 
@@ -16,7 +18,7 @@ services:
       - POSTGRES_PASSWORD=pwd0123456789
       - POSTGRES_DB=mydb
     ports:
-      - "54320:5432"
+      - "5432:5432"
     volumes:
       - mongo-data:/var/lib/postgresql/data
 
