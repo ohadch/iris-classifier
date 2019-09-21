@@ -22,7 +22,7 @@ function login(username, password) {
             username
         }));
         const user = await userService.login(username, password)
-
+        
         if (user.error) {
             dispatch(failure(user.error));
             dispatch(alertActions.error(user.error));
