@@ -4,7 +4,7 @@ import { Grid } from '@material-ui/core';
 import Dropzone from './../components/Dropzone';
 import UploadedImages from './../components/UploadedImages';
 
-function HomePage({ user }) {
+function HomePage() {
   const [images, setImages] = useState([]);
 
   const onDrop = acceptedFiles => {

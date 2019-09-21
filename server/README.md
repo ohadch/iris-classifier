@@ -14,7 +14,8 @@
 - [X] Server side supports authentication
 - [X] Client side supports authentication
 - [X] User can upload images to be classified
-- [ ] User's classification history is saved in postgres
+- [X] User's classification history is saved in postgres
+- [ ] User can view his image classification history
 - [ ] The app is served using docker-compose
 - [ ] The app is deployed using AWS cluster
 - [ ] Model is served using tensorflow-serving 
