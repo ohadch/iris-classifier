@@ -1,6 +1,9 @@
 import os
+import resources
 
 from flask import jsonify, request, render_template
+from flask_restful import Api
+
 from werkzeug.utils import secure_filename
 
 from _sqlalchemy import app
@@ -8,7 +11,7 @@ from settings import HOST, PORT, DEBUG
 from utils.upload import allowed_file
 from utils.classifier import classify
 
-from logger import logger
+api = Api(app)
 
 
 @app.before_request
@@ -19,6 +22,11 @@ def log_request_info():
 @app.route('/')
 def react():
     return render_template("index.html")
+
+
+@app.route('/api')
+def api_home():
+    return jsonify({'message': 'This is Iris Classifier'})
 
 
 @app.route("/api/file", methods=['POST'])
@@ -45,6 +53,14 @@ def upload_file():
 
             return jsonify({'classification': classification})
 
+
+api.add_resource(resources.UserRegistration, '/registration')
+api.add_resource(resources.UserLogin, '/login')
+api.add_resource(resources.UserLogoutAccess, '/logout/access')
+api.add_resource(resources.UserLogoutRefresh, '/logout/refresh')
+api.add_resource(resources.TokenRefresh, '/token/refresh')
+api.add_resource(resources.AllUsers, '/users')
+api.add_resource(resources.SecretResource, '/secret')
 
 if __name__ == '__main__':
     app.run(host=HOST, port=PORT, debug=DEBUG)
