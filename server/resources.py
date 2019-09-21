@@ -4,7 +4,7 @@ from werkzeug.utils import secure_filename
 from utils.upload import allowed_file
 from flask import request, jsonify
 from flask_restful import Resource, reqparse
-from _sqlalchemy import UserModel, RevokedTokenModel
+from _sqlalchemy import UserModel, RevokedTokenModel, Image
 from flask_jwt_extended import create_access_token, create_refresh_token, \
     jwt_required, jwt_refresh_token_required, get_jwt_identity, get_raw_jwt
 from utils.classifier import classify
@@ -124,10 +124,12 @@ class ImageClassification(Resource):
             full_path = os.path.join(UPLOAD_FOLDER, filename)
             file.save(full_path)
 
+            current_user = UserModel.query.filter_by(username=get_jwt_identity()).first()
+            image = Image(server_path=full_path, user=current_user)
+            image.save_to_db()
+
             # Classifies the image
             classification = classify(full_path, 'flower_photos')
-
-            # Removes the uploaded image
-            os.remove(full_path)
+            image.set_classification(current_user, classification)
 
             return jsonify({'classification': classification})

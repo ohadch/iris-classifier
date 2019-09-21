@@ -23,6 +23,7 @@
 - [ ] Classification in the container is empty string
 - [ ] Classification failure is not depicted in the UI
 - [ ] UI shows only one image
+- [ ] Does not throw when receives 101
 
 ### Install:
 - `conda create -n imagecl -f environment.yml`

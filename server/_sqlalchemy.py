@@ -26,7 +26,14 @@ db = SQLAlchemy(app)
 jwt = JWTManager(app)
 
 
-class UserModel(db.Model):
+class AddableMixin:
+
+    def save_to_db(self):
+        db.session.add(self)
+        db.session.commit()
+
+
+class UserModel(db.Model, AddableMixin):
     __tablename__ = 'users'
 
     id = db.Column(db.Integer, primary_key=True)
@@ -64,18 +71,23 @@ class UserModel(db.Model):
     def verify_hash(password, hash):
         return sha256.verify(password, hash)
 
-    def save_to_db(self):
-        db.session.add(self)
-        db.session.commit()
 
-
-class Image(db.Model):
+class Image(db.Model, AddableMixin):
     __tablename__ = 'images'
 
     id = db.Column(db.Integer, primary_key=True)
     server_path = db.Column(db.String(255), unique=True, nullable=False)
-    classification = db.Column(db.String(50), nullable=True)
+    classification = db.Column(db.String(255), nullable=True)
     classification_success = db.Column(db.Boolean, nullable=True)
+
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    user = db.relationship("UserModel")
+
+    def set_classification(self, user, classification):
+        self.user = user
+        self.classification = classification
+
+        self.save_to_db()
 
 
 class RevokedTokenModel(db.Model):
