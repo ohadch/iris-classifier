@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -9,8 +9,9 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-import { userActions } from '../actions';
-import { connect } from 'react-redux';
+import { userActions } from "../actions";
+import { connect } from "react-redux";
+
 
 const useStyles = makeStyles(theme => ({
   "@global": {
@@ -37,20 +38,20 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function LoginPage({dispatch}) {
+export default function LoginPage({ dispatch }) {
   const classes = useStyles();
 
-    const [username, setUserName] = useState('')
-    const [password, setPassword] = useState('')
-    const [submitted, setSubmitted] = useState(false)
+  const [username, setUserName] = useState("");
+  const [password, setPassword] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
   const handleUserNameChange = e => {
-    setUserName(e.target.value)
-  }
+    setUserName(e.target.value);
+  };
 
   const handlePasswordChange = e => {
-    setPassword(e.target.value)
-  }
+    setPassword(e.target.value);
+  };
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -59,7 +60,7 @@ export default function LoginPage({dispatch}) {
     if (username && password) {
       dispatch(userActions.login(username, password));
     }
-  }
+  };
 
   return (
     <Container component="main" maxWidth="xs">

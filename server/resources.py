@@ -45,12 +45,14 @@ class UserLogin(Resource):
             access_token = create_access_token(identity=data['username'])
             refresh_token = create_refresh_token(identity=data['username'])
             return {
-                'message': 'Logged in as {}'.format(current_user.username),
-                'access_token': access_token,
-                'refresh_token': refresh_token
+                'user': {
+                    'message': 'Logged in as {}'.format(current_user.username),
+                    'access_token': access_token,
+                    'refresh_token': refresh_token
+                }
             }
         else:
-            return {'message': 'Wrong credentials'}
+            return {'error': 'Wrong credentials'}
 
 
 class UserLogoutAccess(Resource):
