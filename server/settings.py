@@ -1,11 +1,11 @@
 import os
 import dotenv
 
-ENV = os.environ.get("ENV", "production")
-
 # Load from dotenv only in development
-if ENV == 'development':
+if 'DOCKER' not in os.environ:
     dotenv.load_dotenv()
+
+ENV = os.environ.get("ENV", "production")
 
 HOST = os.environ.get("HOST", '0.0.0.0')
 PORT = os.environ.get("PORT", 8000)
