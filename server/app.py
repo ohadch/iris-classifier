@@ -1,4 +1,5 @@
 import os
+import jwt
 import resources
 
 from flask import jsonify, request, render_template
@@ -7,7 +8,7 @@ from flask_jwt_extended import jwt_required
 
 from werkzeug.utils import secure_filename
 
-from _sqlalchemy import app, db
+from _sqlalchemy import app, db, jwt, RevokedTokenModel
 from settings import HOST, PORT, DEBUG
 from utils.upload import allowed_file
 from utils.classifier import classify
@@ -24,6 +25,12 @@ def create_tables():
 @app.before_request
 def log_request_info():
     app.logger.debug('Headers: %s', request.headers)
+
+
+@jwt.token_in_blacklist_loader
+def check_if_token_in_blacklist(decrypted_token):
+    jti = decrypted_token['jti']
+    return RevokedTokenModel.is_jti_blacklisted(jti)
 
 
 @app.route('/')
