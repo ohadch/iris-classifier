@@ -15,7 +15,8 @@
 - [ ] User can authenticate to the app
 - [ ] User's classification history is saved in postgres
 - [ ] The app is served using docker-compose
-- [ ] The app is deployed using AWS cluster 
+- [ ] The app is deployed using AWS cluster
+- [ ] Model is served using tensorflow-serving 
 
 ### Bugs:
 - [ ] Classification in the container is empty string
