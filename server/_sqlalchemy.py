@@ -3,6 +3,7 @@ from passlib.hash import pbkdf2_sha256 as sha256
 from flask import Flask
 
 from flask_sqlalchemy import SQLAlchemy
+from flask_jwt_extended import JWTManager
 
 from settings import UPLOAD_FOLDER, VERSION, POSTGRES_URI
 from logger import logger
@@ -13,11 +14,13 @@ app = Flask(__name__,
             template_folder="./react/build")
 app.config["SQLALCHEMY_DATABASE_URI"] = POSTGRES_URI
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['JWT_SECRET_KEY'] = 'jwt-secret-string'
 
 logger.info(f"App version: {VERSION}")
 
 
 db = SQLAlchemy(app)
+jwt = JWTManager(app)
 
 
 class UserModel(db.Model):
