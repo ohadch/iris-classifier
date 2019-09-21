@@ -1,11 +1,18 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { connect } from "react-redux";
+
+import { history } from "../helpers";
+import { alertActions } from "../actions";
+import { PrivateRoute } from "../components";
+import { HomePage } from "../HomePage";
+import { LoginPage } from "../LoginPage";
+
 import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import Dropzone from "./Dropzone";
-import UploadedImages from "./UploadedImages";
 
 const useStyles = makeStyles(theme => ({
   appBar: {
@@ -44,13 +51,13 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function App() {
+function App() {
   const classes = useStyles();
   const [images, setImages] = useState([]);
 
   const onDrop = acceptedFiles => {
-
-    for (let file of acceptedFiles) {}
+    for (let file of acceptedFiles) {
+    }
 
     setImages(
       acceptedFiles.map(file =>
@@ -59,7 +66,7 @@ export default function App() {
         })
       )
     );
-  }
+  };
 
   return (
     <React.Fragment>
@@ -72,9 +79,23 @@ export default function App() {
         </Toolbar>
       </AppBar>
       <main className={classes.layout}>
-        <Dropzone onDrop={onDrop} />
-        <UploadedImages images={images} />
+        <Router history={history}>
+          <div>
+            <PrivateRoute exact path="/" component={HomePage} />
+            <Route path="/login" component={LoginPage} />
+          </div>
+        </Router>
       </main>
     </React.Fragment>
   );
 }
+
+function mapStateToProps(state) {
+  const { alert } = state;
+  return {
+    alert
+  };
+}
+
+const connectedApp = connect(mapStateToProps)(App);
+export {connectedApp as App};
