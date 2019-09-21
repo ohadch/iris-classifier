@@ -19,6 +19,14 @@ POSTGRES_PORT = os.environ['POSTGRES_PORT']
 POSTGRES_USER = os.environ['POSTGRES_USER']
 POSTGRES_PASSWORD = os.environ['POSTGRES_PASSWORD']
 POSTGRES_DB = os.environ['POSTGRES_DB']
+POSTGRES_URI = '{db_type}://{user}:{password}@{host}:{port}/{db_name}'.format(
+    db_type=DB_TYPE,
+    user=POSTGRES_USER,
+    password=POSTGRES_PASSWORD,
+    host=POSTGRES_HOST,
+    port=POSTGRES_PORT,
+    db_name=POSTGRES_DB,
+)
 
 # Debug mode
 DEBUG = ENV == 'development'
