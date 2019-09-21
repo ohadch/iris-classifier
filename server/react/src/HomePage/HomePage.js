@@ -17,23 +17,12 @@ function HomePage({ user }) {
 
   return (
     <div className="col-md-6 col-md-offset-3">
-      <h1>Hello, {user.username}!</h1>
-      <p>You're logged in with React & JWT!!</p>
-      <p>
-        <Link to="/login">Logout</Link>
-      </p>
+      Home Page
     </div>
   );
 }
 
-function mapStateToProps(state) {
-  const { users, authentication } = state;
-  const { user } = authentication;
-  return {
-    user,
-    users
-  };
-}
+function mapStateToProps(state) {}
 
 const connectedHomePage = connect(mapStateToProps)(HomePage);
 export { connectedHomePage as HomePage };
