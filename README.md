@@ -2,8 +2,9 @@
 
 ### Stack:
 - Backed: python/flask
-- Frontend: react
+- Frontend: react + redux
 - DB: postgres
+- CI: TravisCI
 - model: tensorflow
 - deployment: docker-compose/AWS
 
