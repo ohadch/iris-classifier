@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="292e46d2-8aaa-49ca-9603-3511ba7e5526" name="Default Changelist" comment="Adds .travis.yml">
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+    <list default="true" id="292e46d2-8aaa-49ca-9603-3511ba7e5526" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.circleci" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model.ipynb" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +41,7 @@
     <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="iris-classifier" />
   </component>
   <component name="ProjectId" id="1R0i46LNxe4yo7R1Kl6imuLkaSI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="C:/work/git/dip-stack/dip-pipeline-python" />
@@ -150,6 +154,7 @@
       <workItem from="1568911283554" duration="3361000" />
       <workItem from="1568963864372" duration="1619000" />
       <workItem from="1569134740495" duration="1348000" />
+      <workItem from="1569136332013" duration="1056000" />
     </task>
     <task id="LOCAL-00001" summary="Adds print so no classification works again">
       <created>1568813709211</created>
@@ -242,7 +247,21 @@
       <option name="project" value="LOCAL" />
       <updated>1569135608833</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Server directory is now the main directory">
+      <created>1569136490049</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1569136490049</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Server directory is now the main directory">
+      <created>1569136649088</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1569136649088</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,6 +281,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
     <MESSAGE value="Adds print so no classification works again" />
     <MESSAGE value="Adds logging of the classification" />
     <MESSAGE value="Runs using app.py" />
@@ -275,7 +297,8 @@
     <MESSAGE value="Styles the image summary card" />
     <MESSAGE value="Shows the image name" />
     <MESSAGE value="Adds .travis.yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds .travis.yml" />
+    <MESSAGE value="Server directory is now the main directory" />
+    <option name="LAST_COMMIT_MESSAGE" value="Server directory is now the main directory" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/server$server.coverage" NAME="server Coverage Results" MODIFIED="1568963868744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

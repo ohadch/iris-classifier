@@ -13,11 +13,11 @@
 - [X] Server side supports authentication
 - [X] Client side supports authentication
 - [X] User can upload images to be classified
-- [X] The image is classiafied using tensorflow model
+- [X] The image is classified using tensorflow model
 - [X] User's classification history is saved in postgres
 - [ ] User can view his image classification history
 - [X] Add tests
-- [ ] Add CircleCI
+- [X] Add TravisCI
 - [X] The app is served using docker-compose
 - [ ] Model is served using tensorflow-serving
 - [ ] The app is deployed using AWS EKS cluster
@@ -26,7 +26,7 @@
 - [ ] Classification in docker container is empty string
 - [ ] Classification failure is not depicted in the UI
 - [X] UI shows only one image
-- [X] Does not throw when receives 101
+- [X] Does not throw when receives 401
 
 ### Install:
 - `conda create -n imagecl -f environment.yml`
