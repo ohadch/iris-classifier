@@ -56,6 +56,9 @@ function App({ user }) {
               <Typography variant="h6" className={classes.title}>
                 Iris Classifier
               </Typography>
+              {user ? <Typography variant="h6" className={classes.title}>
+                Hello, {user.username}
+              </Typography> : ''}
               {user ? <Button className={classes.menuButton} onClick={logout}>Logout</Button> : ''}
             </Toolbar>
           </AppBar>

@@ -13,7 +13,8 @@ import {
 
 export const userActions = {
     login,
-    logout
+    logout,
+    register
 };
 
 function login(username, password) {
@@ -22,6 +23,48 @@ function login(username, password) {
             username
         }));
         const user = await userService.login(username, password)
+        
+        if (user.error) {
+            dispatch(failure(user.error));
+            dispatch(alertActions.error(user.error));
+            alert(user.error)
+            return;
+        } else {
+            dispatch(success(user));
+            history.push('/');
+            /* eslint-disable */
+            location.reload();
+        }
+    };
+
+    function request(user) {
+        return {
+            type: userConstants.LOGIN_REQUEST,
+            user
+        }
+    }
+
+    function success(user) {
+        return {
+            type: userConstants.LOGIN_SUCCESS,
+            user
+        }
+    }
+
+    function failure(error) {
+        return {
+            type: userConstants.LOGIN_FAILURE,
+            error
+        }
+    }
+}
+
+function register(username, password) {
+    return async dispatch => {
+        dispatch(request({
+            username
+        }));
+        const user = await userService.register(username, password)
         
         if (user.error) {
             dispatch(failure(user.error));

@@ -2,14 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="292e46d2-8aaa-49ca-9603-3511ba7e5526" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/react/src/LoginPage/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/LoginPage/LoginPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/actions/user.actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/actions/user.actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/services/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/services/user.service.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="Git.Settings">
     <favorite-branches>
@@ -160,7 +176,7 @@
       <workItem from="1569136332013" duration="1056000" />
       <workItem from="1569137482833" duration="632000" />
       <workItem from="1569147953089" duration="349000" />
-      <workItem from="1569148428315" duration="654000" />
+      <workItem from="1569148428315" duration="1232000" />
     </task>
     <task id="LOCAL-00001" summary="Adds print so no classification works again">
       <created>1568813709211</created>
@@ -288,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569147984546</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Adds mock sign up page">
+      <created>1569149093118</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1569149093118</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,9 +352,22 @@
     <MESSAGE value="Updates requirements.txt and environment.yml" />
     <MESSAGE value="Exports environment.yml without builds" />
     <MESSAGE value="Deletes the no-conda dockerfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deletes the no-conda dockerfile" />
+    <MESSAGE value="Adds mock sign up page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adds mock sign up page" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/resources.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/server$server.coverage" NAME="server Coverage Results" MODIFIED="1568963868744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/iris_classifier$server.coverage" NAME="server Coverage Results" MODIFIED="1569149661671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
