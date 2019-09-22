@@ -2,8 +2,9 @@
 
 ### Stack:
 - Backed: python/flask
-- Frontend: react
+- Frontend: react + redux
 - DB: postgres
+- CI: TravisCI
 - model: tensorflow
 - deployment: docker-compose/AWS
 
@@ -59,3 +60,7 @@ https://getstream.io/blog/deploying-the-winds-api-to-aws-ecs-with-docker-compose
 
 ### Predict
 `python3 label_image.py — graph=retrained_graph.pb — image=test_images/rose.jpg — labels=retrained_labels.txt — output_layer=final_result — input_layer=Placeholder`
+
+### Update existing conda env
+`conda activate myenv`
+`conda env update --file local.yml`
