@@ -22,7 +22,7 @@
 - [X] Add TravisCI
 - [X] The app is served using docker-compose
 - [ ] Model is served using tensorflow-serving
-- [ ] The app is deployed using AWS EKS cluster
+- [X] The app is deployed using AWS
 
 ### Bugs:
 - [ ] Classification in docker container is empty string
