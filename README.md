@@ -73,8 +73,15 @@ Then, restart your computer and continue (it will not work without restarting!).
     sudo yum install docker && \
     sudo curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-compose-`uname -s`-`uname -m` | sudo tee /usr/local/bin/docker-compose > /dev/null && \
     sudo chmod +x /usr/local/bin/docker-compose && \
-    sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+    sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose &&
+    sudo npm cache clean -f && \
+    sudo npm install -g n && \
+    sudo n stable && \
+    sudo ln -sf /usr/local/n/versions/node/10.16.3/bin/node /usr/bin/node
 
+#### Restart docker service
+    sudo service docker stop 
+    sudo service docker start 
 
 #### Clone the repository
     sudo git clone https://github.com/ohadch/iris-classifier.git
