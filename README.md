@@ -46,12 +46,41 @@ If using docker toolbox (windows 10), the app will probably be hosted on http://
 
 
 ### Deploy to AWS EC2
-https://medium.com/@umairnadeem/deploy-to-aws-using-docker-compose-simple-210d71f43e67
+Launch an EC2 instance as described in the following article:
+`https://medium.com/@umairnadeem/deploy-to-aws-using-docker-compose-simple-210d71f43e67`
 
-`scp -r -i imagecl2.pem /mnt/c/ohad/iris-classifier/server ec2-user@34.211.91.223:~/`
-`ssh -i imagecl2.pem ec2-user@34.211.91.223`
 
-### Deploy to AWS EKS
+#### Update WSL permissions to linux-based
+Add this section to your WSL instance’s /etc/wsl.conf (the file probably does not exist, just create it):
+
+    [automount]
+    enabled = true
+    options = "metadata,umask=22,fmask=11"
+
+Then, restart your computer and continue (it will not work without restarting!).
+
+#### SSH into the machine
+    chmod 400 image3.pem
+    scp -r -i imagecl2.pem /mnt/c/ohad/iris-classifier/server ec2-user@34.211.91.223:~/
+    ssh -i imagecl2.pem ec2-user@34.211.91.223
+
+#### Install Environment
+    sudo yum update && \
+    sudo yum install git && \
+    sudo yum install -y gcc-c++ make && \
+    curl -sL https://rpm.nodesource.com/setup_6.x | sudo -E bash - && \
+    sudo yum install nodejs && \
+    sudo yum install docker && \
+    sudo curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-compose-`uname -s`-`uname -m` | sudo tee /usr/local/bin/docker-compose > /dev/null && \
+    sudo chmod +x /usr/local/bin/docker-compose && \
+    sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+
+
+#### Clone the repository
+    sudo git clone https://github.com/ohadch/iris-classifier.git
+
+#### Deploy
+    cd iris-classifier && sudo bash -E ./deploy.sh
 
 ### Deploy to AWS ECS
 https://getstream.io/blog/deploying-the-winds-api-to-aws-ecs-with-docker-compose/
