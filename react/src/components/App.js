@@ -7,6 +7,7 @@ import { userActions } from "../actions";
 import { PrivateRoute } from "../components";
 import { HomePage } from "../HomePage";
 import { LoginPage } from "../LoginPage";
+import { SignUpPage } from "../SignUpPage";
 import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -55,6 +56,9 @@ function App({ user }) {
               <Typography variant="h6" className={classes.title}>
                 Iris Classifier
               </Typography>
+              {user ? <Typography variant="h6" className={classes.title}>
+                Hello, {user.username}
+              </Typography> : ''}
               {user ? <Button className={classes.menuButton} onClick={logout}>Logout</Button> : ''}
             </Toolbar>
           </AppBar>
@@ -63,6 +67,7 @@ function App({ user }) {
           <div style={{padding: "10px"}}>
             <PrivateRoute exact path="/" component={HomePage} />
             <Route path="/login" component={LoginPage} />
+            <Route path="/signup" component={SignUpPage} />
           </div>
         </main>
       </Router>
