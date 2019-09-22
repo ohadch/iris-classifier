@@ -4,6 +4,7 @@ import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
 import Link from "@material-ui/core/Link";
+import { Link as RouterLink } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
@@ -11,7 +12,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import { userActions } from "../actions";
 import { connect } from "react-redux";
-
 
 const useStyles = makeStyles(theme => ({
   "@global": {
@@ -117,8 +117,10 @@ export default function LoginPage({ dispatch }) {
               </Link>
             </Grid> */}
             <Grid item>
-              <Link href="#" variant="body2">
-                {"Don't have an account? Sign Up"}
+              <Link variant="body2">
+                <RouterLink to="/signup">
+                  Don't have an account? Sign Up
+                </RouterLink>
               </Link>
             </Grid>
           </Grid>
