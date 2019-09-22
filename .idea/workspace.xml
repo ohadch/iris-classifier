@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="292e46d2-8aaa-49ca-9603-3511ba7e5526" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/react/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/build/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/build/static/css/2.8271af8e.chunk.css" beforeDir="false" afterPath="$PROJECT_DIR$/react/build/static/css/2.8271af8e.chunk.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/build/static/css/main.498d002a.chunk.css" beforeDir="false" afterPath="$PROJECT_DIR$/react/build/static/css/main.498d002a.chunk.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/build/static/js/runtime~main.a7ca617d.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/build/static/js/runtime~main.a7ca617d.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +42,7 @@
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$/.." value="circleci" />
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -359,7 +353,8 @@
     <MESSAGE value="Exports environment.yml without builds" />
     <MESSAGE value="Deletes the no-conda dockerfile" />
     <MESSAGE value="Adds mock sign up page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds mock sign up page" />
+    <MESSAGE value="Updates the image name" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates the image name" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

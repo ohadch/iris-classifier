@@ -14,6 +14,7 @@
 - [X] Server side supports authentication
 - [X] Client side supports authentication
 - [X] User can upload images to be classified
+- [ ] Uploaded images are saved in s3 bucket
 - [X] The image is classified using tensorflow model
 - [X] User's classification history is saved in postgres
 - [ ] User can view his image classification history
@@ -47,8 +48,8 @@ If using docker toolbox (windows 10), the app will probably be hosted on http://
 ### Deploy to AWS EC2
 https://medium.com/@umairnadeem/deploy-to-aws-using-docker-compose-simple-210d71f43e67
 
-`scp -r -i imagecl2.pem /mnt/c/ohad/iris-classifier/server ec2-user@34.214.42.11:~/`
-`ssh -i imagecl2.pem ec2-user@34.214.42.11`
+`scp -r -i imagecl2.pem /mnt/c/ohad/iris-classifier/server ec2-user@34.211.91.223:~/`
+`ssh -i imagecl2.pem ec2-user@34.211.91.223`
 
 ### Deploy to AWS EKS
 
