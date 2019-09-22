@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="292e46d2-8aaa-49ca-9603-3511ba7e5526" name="Default Changelist" comment="" />
+    <list default="true" id="292e46d2-8aaa-49ca-9603-3511ba7e5526" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/react/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/build/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/build/static/css/2.8271af8e.chunk.css" beforeDir="false" afterPath="$PROJECT_DIR$/react/build/static/css/2.8271af8e.chunk.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/build/static/css/main.498d002a.chunk.css" beforeDir="false" afterPath="$PROJECT_DIR$/react/build/static/css/main.498d002a.chunk.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/build/static/js/runtime~main.a7ca617d.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/build/static/js/runtime~main.a7ca617d.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/package-lock.json" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,6 +182,7 @@
       <workItem from="1569147953089" duration="349000" />
       <workItem from="1569148428315" duration="1232000" />
       <workItem from="1569149830196" duration="341000" />
+      <workItem from="1569150396650" duration="601000" />
     </task>
     <task id="LOCAL-00001" summary="Adds print so no classification works again">
       <created>1568813709211</created>
