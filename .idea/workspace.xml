@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="292e46d2-8aaa-49ca-9603-3511ba7e5526" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/actions/user.actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/actions/user.actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/services/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/services/user.service.js" afterDir="false" />
-    </list>
+    <list default="true" id="292e46d2-8aaa-49ca-9603-3511ba7e5526" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,6 +172,7 @@
       <workItem from="1569137482833" duration="632000" />
       <workItem from="1569147953089" duration="349000" />
       <workItem from="1569148428315" duration="1232000" />
+      <workItem from="1569149830196" duration="341000" />
     </task>
     <task id="LOCAL-00001" summary="Adds print so no classification works again">
       <created>1568813709211</created>
@@ -368,6 +364,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/server$server.coverage" NAME="server Coverage Results" MODIFIED="1568963868744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/iris_classifier$server.coverage" NAME="server Coverage Results" MODIFIED="1569149661671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/iris_classifier$server.coverage" NAME="server Coverage Results" MODIFIED="1569150286881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
